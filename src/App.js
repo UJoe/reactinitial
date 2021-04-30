@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Team from "./components/Team";
 
+//still workin on others
+
 const App = () => {
   const [teams, setTeams] = useState([
     {
