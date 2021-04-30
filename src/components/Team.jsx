@@ -9,12 +9,10 @@ const Team = ({ team }) => {
         <p className="primdata">{team.name}</p>
         <p className="primdata">{team.franchisePlayers}</p>
       </div>
-      {detailshow ? (
+      {{detailshow ? (
         <button onClick={() => setDetailshow(false)}>Show less</button>
-      ) : (
-        <button onClick={() => setDetailshow(true)}>Show more</button>
-      )}
-      {detailshow && <div></div>}
+      ) :}
+      {detailshow && <div></div>}}
     </div>
   );
 };
