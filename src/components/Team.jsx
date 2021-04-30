@@ -3,6 +3,11 @@ import React, { useState } from "react";
 const Team = ({ team }) => {
   const [detailshow, setDetailshow] = useState(false);
   console.log("Team:", team);
+  console.log("name:", team.name);
+
+  const vote = () => {
+    //Oh no my time is over...
+  };
 
   return (
     <div className="teamdiv">
@@ -15,7 +20,15 @@ const Team = ({ team }) => {
       ) : (
         ""
       )}
-      {detailshow && <div></div>}}
+      {detailshow && (
+        <div>
+          {team.franchisePlayers.map((player) => (
+            <div>
+              {player} Vote <button onClick={() => vote()}>Vote</button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -5,52 +5,19 @@ import Team from "./components/Team";
 //still workin on others, still, still and still... and still....
 
 const App = () => {
-  const [teams, setTeams] = useState([
-    {
-      name: "Los Angeles Lakers",
-      stadium: "Staples Center",
-      franchisePlayers: [
-        { id: 1, name: "Lebron James" },
-        { id: 2, name: "Anthony Davis" },
-      ],
-    },
-    {
-      name: "Los Angeles Clippers",
-      stadium: "Staples Center",
-      franchisePlayers: [
-        { id: 3, name: "Kawhi Leonard" },
-        { id: 4, name: "Paul George" },
-      ],
-    },
-    {
-      name: "Phoenix Suns",
-      stadium: "Phoenix Suns Arena",
-      franchisePlayers: [
-        { id: 5, name: "Chris Paul" },
-        { id: 6, name: "Devin Booker" },
-      ],
-    },
-    {
-      name: "Brooklyn Nets",
-      stadium: "Barclays Center",
-      franchisePlayers: [
-        { id: 7, name: "James Harden" },
-        { id: 8, name: "Kevin Durant" },
-        { id: 9, name: "Kyrie Irving" },
-      ],
-    },
-  ]);
+  const [teams, setTeams] = useState([]);
 
   console.log(teams);
-  /* useEffect(() => {
+  useEffect(() => {
     console.log("Fetch data.");
     fetch("api/teams")
       .then((res) => res.json())
       .then((data) => setTeams(data))
       .finally(() => {
-        console.log(teams);
+        console.log("Teams", teams);
       });
-  }, []); */
+  }, []);
+  //It returns an empty array!!!!!
 
   return (
     <div className="App">
